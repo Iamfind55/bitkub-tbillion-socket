@@ -1,0 +1,12 @@
+version: '3.8' # You can adjust the version based on your Docker Compose version
+services:
+  nodejs:
+    container_name: my-node-app # The name for the container
+    build:
+      context: .
+      dockerfile: Dockerfile # Path to your Dockerfile
+    ports:
+      - "3636:3000" # Map the container's port 3000 to the host's port 3000 
+    restart: always # Uncomment this line if you want the container to restart automatically
+
+    
